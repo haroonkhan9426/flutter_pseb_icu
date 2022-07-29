@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:practice/grid_view_example.dart';
+import 'package:practice/list_view_example.dart';
+import 'package:practice/navigation_example/screen2.dart';
+import 'package:practice/navigation_example/screen3.dart';
+import 'package:practice/navigation_example/splash_screen.dart';
+
+import 'navigation_example/screen1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +21,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CardExampleScreen(),
+      // home: SplashScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => SplashScreen(),
+        '/screen1': (context) => Screen1(),
+        '/screen2': (context) => Screen2(),
+        '/screen3': (context) => Screen3(),
+      },
     );
   }
 }
@@ -29,10 +43,6 @@ class CardExampleScreen extends StatelessWidget {
       drawer: Drawer(
           child: Column(children: [
         DrawerHeader(child: Text('UserName')),
-        // Text('Page1'),
-        // Text('Page2'),
-        // Text('Page3'),
-        // Text('Page4'),
         ListTile(title: Text('Page1')),
         ListTile(title: Text('Page2')),
         ListTile(title: Text('Page3')),

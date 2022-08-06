@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:session_12_13/shared_preferences_example.dart';
+import 'package:session_12_13/sqlite_example/screens/add_dog_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: SharedPreferencesExample(),
+      home: AddDogScreen(),
     );
   }
 }

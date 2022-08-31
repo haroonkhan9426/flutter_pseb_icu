@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "853272841293",
+    "project_id": "pse-icu",
+    "storage_bucket": "pse-icu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853272841293:android:2f6894715ec2d702bfa004",
+        "android_client_info": {
+          "package_name": "com.example.firebase_rest_apis_example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853272841293-hj9r3mrj4psedjc5ra45d23frfnl077n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZmjptehrG_wgfm9jRLInPnLl60w11Uno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853272841293-hj9r3mrj4psedjc5ra45d23frfnl077n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

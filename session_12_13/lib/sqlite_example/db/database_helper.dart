@@ -44,7 +44,7 @@ class DatabaseHelper {
   }
 
   void _createDb(Database db, int newVersion) async {
-    await db.execute('''Create TABLE dogs (
+    await db.execute('''Create TABLE $dogsTable (
                   id INTEGER PRIMARY KEY AUTOINCREMENT,
                   name TEXT,
                   age INTEGER )
@@ -60,7 +60,7 @@ class DatabaseHelper {
     // add dog to table
 
     Database db = await instance.database;
-    int result = await db.insert('dogs', dog.toMap());
+    int result = await db.insert(dogsTable, dog.toMap());
     return result;
   }
 
@@ -71,12 +71,14 @@ class DatabaseHelper {
     Database db = await instance.database;
 
     // read data from table
-    List<Map<String, dynamic>> listMap = await db.query('dogs');
-
-    for (var dogMap in listMap) {
-      Dog dog = Dog.fromMap(dogMap);
-      dogs.add(dog);
+    List<Map<String, dynamic>> listMap = await db.query(dogsTable);
+    for (int i = 0; i < listMap.length; i++) {
+      Dog dog = Dog.fromMap(listMap[i]);
     }
+    // for (var dogMap in listMap) {
+    //   Dog dog = Dog.fromMap(dogMap);
+    //   dogs.add(dog);
+    // }
 
     return dogs;
   }
